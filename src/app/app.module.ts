@@ -8,9 +8,14 @@ import { ReactiveFormPracticeComponent } from './features/forms/components/react
 import { SharedModule } from './shared/shared.module';
 import { FormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
+import { BarRatingComponent } from './research/bar-rating/bar-rating.component';
+import { DateControlComponent } from './research/date-control/date-control.component';
+import { DialogComponent } from './research/dialog/dialog.component';
+import { ToastComponent } from './research/toast/toast.component';
+import { ResearchComponent } from './research/research.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, BarRatingComponent, DateControlComponent, DialogComponent, ToastComponent, ResearchComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
