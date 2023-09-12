@@ -1,0 +1,20 @@
+.rating-container {
+  display: flex;
+  flex-direction: column;
+
+  .inactive-star {
+    width: 20px;
+    height: 20px;
+    background-image: url("/assets/InActive.png");
+  }
+  .active-star {
+    width: 20px;
+    height: 20px;
+    background-image: url("/assets/Active.png");
+  }
+  .halfactive-star {
+    width: 20px;
+    height: 20px;
+    background-image: url("/assets/Active.png");
+  }
+}

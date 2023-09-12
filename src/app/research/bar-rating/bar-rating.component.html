@@ -1,1 +1,9 @@
 <p>bar-rating works!</p>
+<div class="rating-container">
+  <div class="rating-title">Rating</div>
+  <bar-rating [(rate)]="rate" [max]="5">
+    <div *ratingActive class="active-star"></div>
+    <div *ratingInactive class="inactive-star"></div>
+    <div *ratingFraction class="halfactive-star"></div>
+  </bar-rating>
+</div>
