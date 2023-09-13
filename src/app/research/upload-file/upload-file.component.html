@@ -6,6 +6,7 @@
     </div>
     <div class="divider"></div>
     <div class="upload-drag-zone">
+      <!-- use ngIf check if FileList have items or not to allow drag file, or else will show upload status -->
       <ngx-file-drop
         dropZoneLabel="Drop files here"
         (onFileDrop)="dropped($event)"
