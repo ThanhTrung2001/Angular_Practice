@@ -1,0 +1,42 @@
+.upload-container {
+  display: flex;
+  flex-direction: row;
+  height: 398px;
+  width: 493px;
+  border: solid 1px #000000;
+  border-radius: 8px;
+  .upload-dialog {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .upload-control-bar {
+      margin: 24px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .title {
+      }
+      .close-btn {
+        background-color: transparent;
+        border: none;
+      }
+    }
+    .divider {
+      border-bottom: solid 1px #000000;
+    }
+    .upload-drag-zone {
+      display: flex;
+      flex-direction: column;
+      margin: 24px;
+
+      &::ng-deep {
+        ngx-file-drop {
+          .ngx-file-drop__drop-zone {
+            border: 2px dashed #000000 !important;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+  }
+}

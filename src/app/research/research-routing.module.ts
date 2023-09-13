@@ -8,6 +8,7 @@ import { DatePickerComponent } from './date-picker/date-picker.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { ToastComponent } from './toast/toast.component';
+import { UploadFileComponent } from './upload-file/upload-file.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,7 @@ const routes: Routes = [
       { path: 'dialog', component: DialogComponent },
       { path: 'navigation-bar', component: NavigationBarComponent },
       { path: 'toast', component: ToastComponent },
+      { path: 'upload-file', component: UploadFileComponent },
       { path: '**', redirectTo: '' },
     ],
   },

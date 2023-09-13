@@ -11,6 +11,8 @@ import { RouterModule } from '@angular/router';
 import { ResearchComponent } from './research.component';
 import { ResearchRoutingModule } from './research-routing.module';
 import { BarRatingModule } from 'ngx-bar-rating';
+import { UploadFileComponent } from './upload-file/upload-file.component';
+import { NgxFileDropModule } from 'ngx-file-drop';
 
 @NgModule({
   declarations: [
@@ -22,8 +24,15 @@ import { BarRatingModule } from 'ngx-bar-rating';
     DateControlComponent,
     DialogComponent,
     ToastComponent,
+    UploadFileComponent,
   ],
-  imports: [CommonModule, RouterModule, ResearchRoutingModule, BarRatingModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    ResearchRoutingModule,
+    BarRatingModule,
+    NgxFileDropModule,
+  ],
   exports: [ResearchComponent],
 })
 export class ResearchModule {}

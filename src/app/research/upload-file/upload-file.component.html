@@ -1,0 +1,78 @@
+<div class="upload-container">
+  <div class="upload-dialog">
+    <div class="upload-control-bar">
+      <div class="title">Upload Document</div>
+      <button class="close-btn">X</button>
+    </div>
+    <div class="divider"></div>
+    <div class="upload-drag-zone">
+      <ngx-file-drop
+        dropZoneLabel="Drop files here"
+        (onFileDrop)="dropped($event)"
+        (onFileOver)="fileOver($event)"
+        (onFileLeave)="fileLeave($event)"
+      >
+        <ng-template
+          ngx-file-drop-content-tmp
+          let-openFileSelector="openFileSelector"
+        >
+          <button type="button" (click)="openFileSelector()">
+            Browse Files
+          </button>
+        </ng-template>
+      </ngx-file-drop>
+    </div>
+    <div class="divider"></div>
+    <div class="upload-function-btn">
+      <div class="cancel-btn"></div>
+      <div class="upload-btn"></div>
+    </div>
+  </div>
+</div>
+<div class="upload-table">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody class="upload-name-style">
+      <tr *ngFor="let item of files; let i = index">
+        <td>
+          <strong>{{ item.relativePath }}</strong>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- <div class="center">
+  <ngx-file-drop
+    dropZoneLabel="Drop files here"
+    (onFileDrop)="dropped($event)"
+    (onFileOver)="fileOver($event)"
+    (onFileLeave)="fileLeave($event)"
+  >
+    <ng-template
+      ngx-file-drop-content-tmp
+      let-openFileSelector="openFileSelector"
+    >
+      <button type="button" (click)="openFileSelector()">Browse Files</button>
+    </ng-template>
+  </ngx-file-drop>
+  <div class="upload-table">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody class="upload-name-style">
+        <tr *ngFor="let item of files; let i = index">
+          <td>
+            <strong>{{ item.relativePath }}</strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
