@@ -16,16 +16,30 @@
           ngx-file-drop-content-tmp
           let-openFileSelector="openFileSelector"
         >
-          <button type="button" (click)="openFileSelector()">
-            Browse Files
-          </button>
+          <div class="not-drag-container" [class.active]="isDragFile === false">
+            <div class="image-showing"></div>
+            <div class="middle-title">
+              <div class="showing-title">Drag & drop files or&nbsp;</div>
+              <a (click)="openFileSelector()">Browse</a>
+            </div>
+            <div class="sub-title">
+              Supported file formats .PDF, .PPT, .DOC, .DOCX, .XLS, .XLSX
+            </div>
+          </div>
+          <div class="dragging-container" [class.active]="isDragFile === true">
+            <div class="title">Drop file here</div>
+          </div>
         </ng-template>
       </ngx-file-drop>
     </div>
     <div class="divider"></div>
     <div class="upload-function-btn">
-      <div class="cancel-btn"></div>
-      <div class="upload-btn"></div>
+      <button class="cancel-btn">
+        <div class="title">Cancel</div>
+      </button>
+      <button class="upload-btn">
+        <div class="title">Upload</div>
+      </button>
     </div>
   </div>
 </div>

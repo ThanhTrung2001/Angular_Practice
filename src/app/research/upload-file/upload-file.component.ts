@@ -7,9 +7,11 @@ import { NgxFileDropEntry } from 'ngx-file-drop';
   styleUrls: ['./upload-file.component.scss'],
 })
 export class UploadFileComponent {
+  isDragFile: boolean = false;
   public files: NgxFileDropEntry[] = [];
   constructor() {}
   public dropped(files: NgxFileDropEntry[]) {
+    this.isDragFile = false;
     this.files = files;
     for (const droppedFile of files) {
       // Is it a file?
@@ -45,9 +47,18 @@ export class UploadFileComponent {
 
   public fileOver(event: any) {
     console.log(event);
+    if (this.isDragFile === false) {
+      this.isDragFile = true;
+    }
+    console.log(this.isDragFile);
   }
 
   public fileLeave(event: any) {
     console.log(event);
+    if (this.isDragFile === true) {
+      this.isDragFile = false;
+    }
+
+    console.log(this.isDragFile);
   }
 }
