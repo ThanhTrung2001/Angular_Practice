@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgxFileDropEntry } from 'ngx-file-drop';
+import { FileSystemEntryMetadata } from 'ngx-file-drop/lib/dom.types';
 
 @Component({
   selector: 'app-upload-file',
@@ -9,6 +10,7 @@ import { NgxFileDropEntry } from 'ngx-file-drop';
 export class UploadFileComponent {
   isDragFile: boolean = false;
   public files: NgxFileDropEntry[] = [];
+  uploadFile: File[] = [];
   constructor() {}
   public dropped(files: NgxFileDropEntry[]) {
     this.isDragFile = false;
@@ -18,6 +20,8 @@ export class UploadFileComponent {
       if (droppedFile.fileEntry.isFile) {
         const fileEntry = droppedFile.fileEntry as FileSystemFileEntry;
         fileEntry.file((file: File) => {
+          this.uploadFile.push(file);
+          console.log(this.uploadFile.length);
           // Here you can access the real file
           console.log(droppedFile.relativePath, file);
 
@@ -43,6 +47,7 @@ export class UploadFileComponent {
         console.log(droppedFile.relativePath, fileEntry);
       }
     }
+    console.log(this.uploadFile.length);
   }
 
   public fileOver(event: any) {

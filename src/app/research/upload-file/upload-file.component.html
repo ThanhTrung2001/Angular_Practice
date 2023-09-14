@@ -1,3 +1,4 @@
+<a href="https://www.npmjs.com/package/ngx-file-drop">ngx-file-drop</a>
 <div class="upload-container">
   <div class="upload-dialog">
     <div class="upload-control-bar">
@@ -8,6 +9,7 @@
     <div class="upload-drag-zone">
       <!-- use ngIf check if FileList have items or not to allow drag file, or else will show upload status -->
       <ngx-file-drop
+        *ngIf="files.length === 0"
         dropZoneLabel="Drop files here"
         (onFileDrop)="dropped($event)"
         (onFileOver)="fileOver($event)"
@@ -32,6 +34,19 @@
           </div>
         </ng-template>
       </ngx-file-drop>
+      <!-- If fileDrop[] has length != 0 -->
+      <div *ngIf="files.length > 0" class="uploaded-file-container">
+        <div class="uploaded-title">Uploaded</div>
+        <div class="uploaded-item-container">
+          <app-uploaded-item
+            *ngFor="let item of files"
+            [name]="item.relativePath"
+            [size]="1"
+            [percent]="52"
+          ></app-uploaded-item>
+        </div>
+      </div>
+      <!-- End here -->
     </div>
     <div class="divider"></div>
     <div class="upload-function-btn">
@@ -60,34 +75,3 @@
     </tbody>
   </table>
 </div>
-<!-- <div class="center">
-  <ngx-file-drop
-    dropZoneLabel="Drop files here"
-    (onFileDrop)="dropped($event)"
-    (onFileOver)="fileOver($event)"
-    (onFileLeave)="fileLeave($event)"
-  >
-    <ng-template
-      ngx-file-drop-content-tmp
-      let-openFileSelector="openFileSelector"
-    >
-      <button type="button" (click)="openFileSelector()">Browse Files</button>
-    </ng-template>
-  </ngx-file-drop>
-  <div class="upload-table">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Name</th>
-        </tr>
-      </thead>
-      <tbody class="upload-name-style">
-        <tr *ngFor="let item of files; let i = index">
-          <td>
-            <strong>{{ item.relativePath }}</strong>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div> -->

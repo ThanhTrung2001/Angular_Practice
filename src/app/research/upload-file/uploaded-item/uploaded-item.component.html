@@ -1,0 +1,20 @@
+<div class="uploaded-item-card">
+  <div class="file-image-container">
+    <div class="file-image">I</div>
+  </div>
+  <div class="progress-container">
+    <div class="title">
+      <div class="file-name">{{ name }}</div>
+      <div class="upload-perdent">{{ percent }}%</div>
+    </div>
+    <div class="progress-bar">
+      <mat-progress-bar
+        *ngIf="percent < 100"
+        mode="determinate"
+        value="{{ percent }}"
+      ></mat-progress-bar>
+      <div *ngIf="percent === 100" class="file-size">{{ size }}MB</div>
+    </div>
+  </div>
+  <button class="cancel-btn">x</button>
+</div>

@@ -68,6 +68,9 @@
                   height: 30px;
                   justify-content: center;
                   align-items: center;
+                  .showing-title {
+                    pointer-events: none;
+                  }
                   a {
                     color: #1157c8;
                     cursor: pointer;
@@ -76,6 +79,7 @@
                 .sub-title {
                   font-size: 12px;
                   color: #8b8c99;
+                  pointer-events: none;
                 }
               }
               .dragging-container {
@@ -93,6 +97,13 @@
               }
             }
           }
+        }
+      }
+      .uploaded-file-container {
+        .uploaded-title {
+          margin-bottom: 12px;
+        }
+        .uploaded-item-container {
         }
       }
     }

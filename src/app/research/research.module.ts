@@ -13,6 +13,8 @@ import { ResearchRoutingModule } from './research-routing.module';
 import { BarRatingModule } from 'ngx-bar-rating';
 import { UploadFileComponent } from './upload-file/upload-file.component';
 import { NgxFileDropModule } from 'ngx-file-drop';
+import { UploadedItemComponent } from './upload-file/uploaded-item/uploaded-item.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { NgxFileDropModule } from 'ngx-file-drop';
     DialogComponent,
     ToastComponent,
     UploadFileComponent,
+    UploadedItemComponent,
   ],
   imports: [
     CommonModule,
@@ -32,6 +35,7 @@ import { NgxFileDropModule } from 'ngx-file-drop';
     ResearchRoutingModule,
     BarRatingModule,
     NgxFileDropModule,
+    MatProgressBarModule,
   ],
   exports: [ResearchComponent],
 })
