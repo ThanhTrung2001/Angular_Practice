@@ -1,4 +1,7 @@
+import { SafeUrl } from '@angular/platform-browser';
+
 export interface UploadFile {
-  name: string;
-  size: number;
+  file: File;
+  safeUrl: SafeUrl;
+  uploadPercent: number;
 }

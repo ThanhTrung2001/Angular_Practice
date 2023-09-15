@@ -15,6 +15,9 @@ import { UploadFileComponent } from './upload-file/upload-file.component';
 import { NgxFileDropModule } from 'ngx-file-drop';
 import { UploadedItemComponent } from './upload-file/uploaded-item/uploaded-item.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { NgxFileDragDropModule } from 'ngx-file-drag-drop';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DragDirective } from './upload-file/directives/dragndrop.directive';
 
 @NgModule({
   declarations: [
@@ -28,14 +31,16 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     ToastComponent,
     UploadFileComponent,
     UploadedItemComponent,
+    DragDirective,
   ],
   imports: [
     CommonModule,
     RouterModule,
     ResearchRoutingModule,
     BarRatingModule,
-    NgxFileDropModule,
     MatProgressBarModule,
+    NgxFileDragDropModule,
+    ReactiveFormsModule,
   ],
   exports: [ResearchComponent],
 })

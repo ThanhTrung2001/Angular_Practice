@@ -6,43 +6,48 @@
       <button class="close-btn">X</button>
     </div>
     <div class="divider"></div>
-    <div class="upload-drag-zone">
-      <!-- use ngIf check if FileList have items or not to allow drag file, or else will show upload status -->
-      <ngx-file-drop
-        *ngIf="files.length === 0"
-        dropZoneLabel="Drop files here"
-        (onFileDrop)="dropped($event)"
-        (onFileOver)="fileOver($event)"
-        (onFileLeave)="fileLeave($event)"
+    <div class="upload-drag-container">
+      <div
+        class="upload-drag-zone"
+        appDrag
+        (files)="onFileDropped($event)"
+        (dragFileEmit)="changeDragState($event)"
       >
-        <ng-template
-          ngx-file-drop-content-tmp
-          let-openFileSelector="openFileSelector"
+        <input
+          id="inputFile"
+          type="file"
+          (change)="uploadHandler($event)"
+          multiple="true"
+        />
+        <!-- use ngIf check if FileList have items or not to allow drag file, or else will show upload status -->
+        <!-- If fileDrop[] has length != 0 -->
+        <div
+          *ngIf="uploadFiles.length === 0"
+          class="not-drag-container"
+          [class.active]="isDragFile === false"
         >
-          <div class="not-drag-container" [class.active]="isDragFile === false">
-            <div class="image-showing"></div>
-            <div class="middle-title">
-              <div class="showing-title">Drag & drop files or&nbsp;</div>
-              <a (click)="openFileSelector()">Browse</a>
-            </div>
-            <div class="sub-title">
-              Supported file formats .PDF, .PPT, .DOC, .DOCX, .XLS, .XLSX
-            </div>
+          <div class="image-showing"></div>
+          <div class="middle-title">
+            <div class="showing-title">Drag & drop files or&nbsp;</div>
+            <label for="inputFile">Browse</label>
           </div>
-          <div class="dragging-container" [class.active]="isDragFile === true">
-            <div class="title">Drop file here</div>
+          <div class="sub-title">
+            Supported file formats .PDF, .PPT, .DOC, .DOCX, .XLS, .XLSX
           </div>
-        </ng-template>
-      </ngx-file-drop>
-      <!-- If fileDrop[] has length != 0 -->
-      <div *ngIf="files.length > 0" class="uploaded-file-container">
+        </div>
+        <div class="dragging-container" [class.active]="isDragFile === true">
+          <div class="title">Drop file here</div>
+        </div>
+      </div>
+      <!-- Else -->
+      <div *ngIf="uploadFiles.length !== 0" class="uploaded-file-container">
         <div class="uploaded-title">Uploaded</div>
         <div class="uploaded-item-container">
           <app-uploaded-item
-            *ngFor="let item of files"
-            [name]="item.relativePath"
-            [size]="1"
-            [percent]="52"
+            *ngFor="let item of uploadFiles"
+            [name]="item.file.name"
+            [size]="item.file.size"
+            [percent]="item.uploadPercent"
           ></app-uploaded-item>
         </div>
       </div>
@@ -58,20 +63,4 @@
       </button>
     </div>
   </div>
-</div>
-<div class="upload-table">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody class="upload-name-style">
-      <tr *ngFor="let item of files; let i = index">
-        <td>
-          <strong>{{ item.relativePath }}</strong>
-        </td>
-      </tr>
-    </tbody>
-  </table>
 </div>

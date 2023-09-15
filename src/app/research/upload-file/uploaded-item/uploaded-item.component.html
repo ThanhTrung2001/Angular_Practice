@@ -13,7 +13,9 @@
         mode="determinate"
         value="{{ percent }}"
       ></mat-progress-bar>
-      <div *ngIf="percent === 100" class="file-size">{{ size }}MB</div>
+      <div *ngIf="percent === 100" class="file-size">
+        {{ formatBytes(size, 2) }}
+      </div>
     </div>
   </div>
   <button class="cancel-btn">x</button>
