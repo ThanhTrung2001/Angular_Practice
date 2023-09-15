@@ -45,9 +45,9 @@
         <div class="uploaded-item-container">
           <app-uploaded-item
             *ngFor="let item of uploadFiles"
-            [name]="item.file.name"
-            [size]="item.file.size"
+            [file]="item.file"
             [percent]="item.uploadPercent"
+            (deleteEvent)="deleteFile($event)"
           ></app-uploaded-item>
         </div>
       </div>

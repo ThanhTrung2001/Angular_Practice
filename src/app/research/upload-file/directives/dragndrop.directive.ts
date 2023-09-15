@@ -49,7 +49,7 @@ export class DragDirective {
         const url = this.sanitizer.bypassSecurityTrustUrl(
           window.URL.createObjectURL(file)
         );
-        files.push({ file: file, safeUrl: url, uploadPercent: 0 });
+        files.push({ file: file, safeUrl: url, uploadPercent: 52 });
       }
       if (files.length > 0) {
         this.files.emit(files);

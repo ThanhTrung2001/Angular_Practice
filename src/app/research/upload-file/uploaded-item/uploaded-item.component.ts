@@ -7,19 +7,14 @@ import { UploadFile } from './interfaces/upload-file';
   styleUrls: ['./uploaded-item.component.scss'],
 })
 export class UploadedItemComponent {
-  @Input({}) name: string = '';
-  @Input({}) size: number = 0;
+  @Input({}) file: File = new File([], '');
   @Input({}) percent: number = 0;
-  // @Output() deleteEvent: EventEmitter<string> = new E;
-  constructor() {
-    this.name = 'your-file-here.PDF';
-    this.size = 12;
-    this.percent = 52;
-  }
+  @Output() deleteEvent: EventEmitter<File> = new EventEmitter();
+  constructor() {}
 
-  // deleteUploadedFile() {
-  //   this.deleteEvent.emit();
-  // }
+  deleteUploadedFile() {
+    this.deleteEvent.emit(this.file);
+  }
 
   formatBytes(bytes: number, decimals: number) {
     if (bytes === 0) {

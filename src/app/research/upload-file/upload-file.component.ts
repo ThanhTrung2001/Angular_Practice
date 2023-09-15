@@ -31,8 +31,13 @@ export class UploadFileComponent {
       const url = this.sanitizer.bypassSecurityTrustUrl(
         window.URL.createObjectURL(file)
       );
-      this.uploadFiles.push({ file: file, safeUrl: url, uploadPercent: 100 });
-      console.log();
+      this.uploadFiles.push({ file: file, safeUrl: url, uploadPercent: 52 });
     }
+  }
+
+  deleteFile(eventData: File) {
+    let index = this.uploadFiles.findIndex((x) => x.file === eventData);
+    console.log(index);
+    this.uploadFiles.splice(index, 1);
   }
 }

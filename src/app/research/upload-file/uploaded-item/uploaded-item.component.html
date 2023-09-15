@@ -4,7 +4,7 @@
   </div>
   <div class="progress-container">
     <div class="title">
-      <div class="file-name">{{ name }}</div>
+      <div class="file-name">{{ file.name }}</div>
       <div class="upload-perdent">{{ percent }}%</div>
     </div>
     <div class="progress-bar">
@@ -14,9 +14,9 @@
         value="{{ percent }}"
       ></mat-progress-bar>
       <div *ngIf="percent === 100" class="file-size">
-        {{ formatBytes(size, 2) }}
+        {{ formatBytes(file.size, 2) }}
       </div>
     </div>
   </div>
-  <button class="cancel-btn">x</button>
+  <button (click)="deleteUploadedFile()" class="cancel-btn">x</button>
 </div>
