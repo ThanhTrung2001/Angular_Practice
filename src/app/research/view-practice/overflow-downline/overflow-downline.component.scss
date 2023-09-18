@@ -1,0 +1,215 @@
+.detail-header {
+  display: flex;
+  width: 663px;
+  flex-direction: row;
+  margin-bottom: 16px;
+  .back-btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+    .session-back-btn {
+    }
+  }
+  .header-content-path {
+    margin-left: 12px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    .detail-header-top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      .session-topic-name {
+        font-size: 26px;
+        font-weight: 600;
+      }
+      .session-topic-type {
+        background-color: #3b82f6;
+        border: none;
+        border-radius: 38px;
+        .topic-type {
+          margin: 6px 8px;
+          color: white;
+        }
+      }
+    }
+    .detail-header-bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .session-period {
+        display: flex;
+        flex-direction: row;
+        .icon {
+        }
+        .title {
+          color: #8b8c99;
+        }
+      }
+      .session-edit-btn {
+        display: flex;
+        flex-direction: row;
+        .icon {
+        }
+        .title {
+          color: #1157c8;
+        }
+      }
+    }
+  }
+}
+
+.divider {
+  display: flex;
+  flex-direction: row;
+  width: 663px;
+  border-top: solid 2px #b6bcc1;
+  margin-bottom: 24px;
+}
+
+.detail-content-information {
+  display: flex;
+  width: 663px;
+  flex-direction: column;
+  .collection-path {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    .presenter-container {
+      display: flex;
+      flex-direction: column;
+      .presenter-title {
+        margin-bottom: 8px;
+      }
+      .presenter-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .avatar {
+          width: 30px;
+          height: 30px;
+          border: none;
+          border-radius: 20px;
+          margin-right: 10px;
+        }
+      }
+    }
+    .meeting-type-container {
+      display: flex;
+      flex-direction: column;
+      .meeting-title {
+        margin-bottom: 8px;
+      }
+      .meeting-info {
+        color: black;
+      }
+    }
+    .rating-container {
+      display: flex;
+      flex-direction: column;
+
+      .inactive-star {
+        width: 20px;
+        height: 20px;
+        background-image: url("/assets/InActive.png");
+      }
+      .active-star {
+        width: 20px;
+        height: 20px;
+        background-image: url("/assets/Active.png");
+      }
+      .halfactive-star {
+        width: 20px;
+        height: 20px;
+        background-image: url("/assets/Active.png");
+      }
+    }
+  }
+  .attendees {
+    display: flex;
+    flex-direction: column;
+    .attendees-container {
+      display: flex;
+      flex-direction: column;
+      .title {
+        padding-bottom: 8px;
+      }
+      .attendees-member {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 8px;
+        .attendee-card {
+          display: flex;
+          border: solid 1px #3b82f6;
+          border-radius: 4px;
+          background-color: none;
+          .attendee-name {
+            margin: 2px 8px;
+            color: #3b82f6;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.attachment-container {
+  width: 663px;
+  display: flex;
+  flex-direction: column;
+  .title {
+    margin-bottom: 8px;
+  }
+  .item-container {
+    display: flex;
+    flex-direction: row;
+    .upload-btn {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      margin-right: 16px;
+    }
+    .right-attachment-items {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 8px;
+      .attach-item-card {
+        display: flex;
+        border: solid 1px #3b82f6;
+        border-radius: 4px;
+        background-color: none;
+        flex-direction: row;
+        align-items: center;
+        .file-name {
+          margin: 2px 8px;
+          color: #3b82f6;
+          font-size: 12px;
+        }
+        .delete-btn-container {
+          width: 10px;
+          height: 10px;
+          margin-right: 4px;
+          border: solid 1px #3b82f6;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          & div {
+            font-size: 10px;
+            color: #3b82f6;
+          }
+        }
+      }
+    }
+  }
+}

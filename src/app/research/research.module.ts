@@ -22,6 +22,12 @@ import { NotificationSnackBarComponent } from './toast/notification-snack-bar/no
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatButtonModule } from '@angular/material/button';
+import { ViewPracticeComponent } from './view-practice/view-practice.component';
+import { MasonryViewComponent } from './view-practice/masonry-view/masonry-view.component';
+import { NgxMasonryModule } from 'ngx-masonry';
+import { GridViewComponent } from './view-practice/grid-view/grid-view.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { OverflowDownlineComponent } from './view-practice/overflow-downline/overflow-downline.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +43,10 @@ import { MatButtonModule } from '@angular/material/button';
     UploadedItemComponent,
     DragDirective,
     NotificationSnackBarComponent,
+    ViewPracticeComponent,
+    MasonryViewComponent,
+    GridViewComponent,
+    OverflowDownlineComponent,
   ],
   imports: [
     CommonModule,
@@ -49,6 +59,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatSnackBarModule,
     MatButtonModule,
+    NgxMasonryModule,
+    MatGridListModule,
   ],
   exports: [ResearchComponent],
 })

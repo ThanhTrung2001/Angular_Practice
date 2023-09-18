@@ -1,0 +1,121 @@
+<div class="detail-header">
+  <div class="back-btn-container">
+    <button class="session-back-btn">B</button>
+  </div>
+  <div class="header-content-path">
+    <div class="detail-header-top">
+      <div class="session-topic-name">How to write Unit Test ?</div>
+      <div class="session-topic-type">
+        <div class="topic-type">Back-End Topic</div>
+      </div>
+    </div>
+    <div class="detail-header-bottom">
+      <div class="session-period">
+        <div class="icon"></div>
+        <div class="title">8:00 - 9:00 AM -- Sat, July 27, 2023</div>
+      </div>
+      <div class="session-edit-btn">
+        <div class="icon"></div>
+        <div class="title">Edit</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="divider"></div>
+<div class="detail-content-information">
+  <div class="collection-path">
+    <div class="presenter-container">
+      <div class="presenter-title">Presenter:</div>
+      <div class="presenter-info">
+        <img class="avatar" src="https://i.imgur.com/qywe4pq.jpg" />
+        <div class="name">Presenter1</div>
+      </div>
+    </div>
+    <div class="meeting-type-container">
+      <div class="meeting-title">Meeting Type</div>
+      <div class="meeting-info">In Office</div>
+    </div>
+    <div class="rating-container">
+      <div class="rating-title">Rating</div>
+      <bar-rating [(rate)]="rate" [max]="5">
+        <div *ratingActive class="active-star"></div>
+        <div *ratingInactive class="inactive-star"></div>
+        <div *ratingFraction class="halfactive-star"></div>
+      </bar-rating>
+    </div>
+  </div>
+  <div class="attendees">
+    <div class="attendees-container">
+      <div class="title">Attendee1</div>
+      <!-- <mat-grid-list class="info" cols="3" rowHeight="100px" gutterSize="8px">
+        <mat-grid-tile>
+          <div class="attendee-card">
+            <div class="attendee-name">Kane Tran</div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="attendee-card">
+            <div class="attendee-name">Kane Tran</div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <div class="attendee-card">
+            <div class="attendee-name">Kane Tran</div>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list> -->
+      <mat-grid-list cols="8" rowHeight="20px" gutterSize="8px">
+        <mat-grid-tile rowspan="1">
+          <div class="attendee-card">
+            <div class="attendee-name">Kane Tran</div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+          <div class="attendee-card">
+            <div class="attendee-name">Kane Tran</div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+          <div class="attendee-card">
+            <div class="attendee-name">Kane Tran</div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+          <div class="attendee-card">
+            <div class="attendee-name">Kane Tran</div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+          <div class="attendee-card">
+            <div class="attendee-name">Kane Tran</div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+          <div class="attendee-card">
+            <div class="attendee-name">Kane Tran</div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+          <div class="attendee-card">
+            <div class="attendee-name">Kane Tran</div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+          <div class="attendee-card">
+            <div class="attendee-name">Kane Tran</div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+          <div class="attendee-card">
+            <div class="attendee-name">Kane Tran</div>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+          <div class="attendee-card">
+            <div class="attendee-name">Kane Tran</div>
+          </div>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </div>
+</div>

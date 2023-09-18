@@ -9,6 +9,7 @@ import { DialogComponent } from './dialog/dialog.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { ToastComponent } from './toast/toast.component';
 import { UploadFileComponent } from './upload-file/upload-file.component';
+import { ViewPracticeComponent } from './view-practice/view-practice.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,7 @@ const routes: Routes = [
       { path: 'navigation-bar', component: NavigationBarComponent },
       { path: 'snackbar', component: ToastComponent },
       { path: 'upload-file', component: UploadFileComponent },
+      { path: 'view', component: ViewPracticeComponent },
       { path: '**', redirectTo: '' },
     ],
   },

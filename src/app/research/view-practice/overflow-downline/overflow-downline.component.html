@@ -1,0 +1,71 @@
+<div class="detail-header">
+  <div class="back-btn-container">
+    <button class="session-back-btn">B</button>
+  </div>
+  <div class="header-content-path">
+    <div class="detail-header-top">
+      <div class="session-topic-name">How to write Unit Test ?</div>
+      <div class="session-topic-type">
+        <div class="topic-type">Back-End Topic</div>
+      </div>
+    </div>
+    <div class="detail-header-bottom">
+      <div class="session-period">
+        <div class="icon"></div>
+        <div class="title">8:00 - 9:00 AM -- Sat, July 27, 2023</div>
+      </div>
+      <div class="session-edit-btn">
+        <div class="icon"></div>
+        <div class="title" (click)="add()">Edit</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="divider"></div>
+<div class="detail-content-information">
+  <div class="collection-path">
+    <div class="presenter-container">
+      <div class="presenter-title">Presenter:</div>
+      <div class="presenter-info">
+        <img class="avatar" src="https://i.imgur.com/qywe4pq.jpg" />
+        <div class="name">Presenter1</div>
+      </div>
+    </div>
+    <div class="meeting-type-container">
+      <div class="meeting-title">Meeting Type</div>
+      <div class="meeting-info">In Office</div>
+    </div>
+    <div class="rating-container">
+      <div class="rating-title">Rating</div>
+      <bar-rating [(rate)]="rate" [max]="5">
+        <div *ratingActive class="active-star"></div>
+        <div *ratingInactive class="inactive-star"></div>
+        <div *ratingFraction class="halfactive-star"></div>
+      </bar-rating>
+    </div>
+  </div>
+  <div class="attendees">
+    <div class="attendees-container">
+      <div class="title">Attendee</div>
+      <div class="attendees-member">
+        <div *ngFor="let item of items" class="attendee-card">
+          <div class="attendee-name">{{ item.name }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="attachment-container">
+  <div class="title">Attachments</div>
+  <div class="item-container">
+    <button type="button" class="upload-btn">Up</button>
+    <div class="right-attachment-items">
+      <div *ngFor="let file of files" class="attach-item-card">
+        <div class="file-name">{{ file.name }}</div>
+        <div class="delete-btn-container" (click)="delete()">
+          <div>x</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
