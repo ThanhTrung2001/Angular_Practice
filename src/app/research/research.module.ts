@@ -18,6 +18,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { NgxFileDragDropModule } from 'ngx-file-drag-drop';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DragDirective } from './upload-file/directives/dragndrop.directive';
+import { NotificationSnackBarComponent } from './toast/notification-snack-bar/notification-snack-bar.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -32,6 +36,7 @@ import { DragDirective } from './upload-file/directives/dragndrop.directive';
     UploadFileComponent,
     UploadedItemComponent,
     DragDirective,
+    NotificationSnackBarComponent,
   ],
   imports: [
     CommonModule,
@@ -41,6 +46,9 @@ import { DragDirective } from './upload-file/directives/dragndrop.directive';
     MatProgressBarModule,
     NgxFileDragDropModule,
     ReactiveFormsModule,
+    MatIconModule,
+    MatSnackBarModule,
+    MatButtonModule,
   ],
   exports: [ResearchComponent],
 })

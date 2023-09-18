@@ -1,7 +1,6 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -13,20 +12,27 @@
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $Angular_Practice-primary: mat.define-palette(mat.$indigo-palette);
-$Angular_Practice-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$Angular_Practice-accent: mat.define-palette(
+  mat.$pink-palette,
+  A200,
+  A100,
+  A400
+);
 
 // The warn palette is optional (defaults to red).
 $Angular_Practice-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$Angular_Practice-theme: mat.define-light-theme((
-  color: (
-    primary: $Angular_Practice-primary,
-    accent: $Angular_Practice-accent,
-    warn: $Angular_Practice-warn,
+$Angular_Practice-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $Angular_Practice-primary,
+      accent: $Angular_Practice-accent,
+      warn: $Angular_Practice-warn,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -42,5 +48,34 @@ $Angular_Practice-theme: mat.define-light-theme((
 @import "node_modules/ngx-bar-rating/themes/br-vertical-theme";
 @import "node_modules/ngx-bar-rating/themes/br-movie-theme";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mdc-snackbar__surface {
+  width: 507px;
+  height: 72px;
+  box-shadow: none !important;
+}
+
+.successful {
+  .mdc-snackbar__surface {
+    border: solid 1px #bae7a3;
+    border-radius: 10px !important;
+    background-color: #eef9e8 !important;
+    margin: 0 49px 61px 0;
+  }
+}
+
+.error {
+  .mdc-snackbar__surface {
+    border: solid 1px #d13c3c;
+    border-radius: 10px !important;
+    background-color: #e69e9e !important;
+  }
+}

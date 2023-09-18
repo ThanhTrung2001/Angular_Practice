@@ -22,7 +22,7 @@ const routes: Routes = [
       { path: 'date-picker', component: DatePickerComponent },
       { path: 'dialog', component: DialogComponent },
       { path: 'navigation-bar', component: NavigationBarComponent },
-      { path: 'toast', component: ToastComponent },
+      { path: 'snackbar', component: ToastComponent },
       { path: 'upload-file', component: UploadFileComponent },
       { path: '**', redirectTo: '' },
     ],

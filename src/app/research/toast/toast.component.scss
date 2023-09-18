@@ -1,0 +1,11 @@
+.cdk-overlay-container {
+  .cdk-global-overlay-wrapper {
+    .cdk-overlay-1 {
+      mat-snack-bar-container {
+        .mdc-snackbar__surface {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

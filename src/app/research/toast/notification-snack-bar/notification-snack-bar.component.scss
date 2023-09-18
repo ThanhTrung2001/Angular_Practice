@@ -1,0 +1,36 @@
+.snackbar-container {
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .left-path {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .icon {
+      display: flex;
+      flex-direction: column;
+      margin-right: 16px;
+      width: 32px;
+      height: 32px;
+      border: none;
+      border-radius: 10px;
+      background-color: #42aa10;
+      justify-content: center;
+      align-items: center;
+      mat-icon {
+        transform: scale(0.9);
+        color: #fff;
+      }
+    }
+  }
+  .right-path {
+    .close-btn {
+      color: #000;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
