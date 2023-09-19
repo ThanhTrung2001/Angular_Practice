@@ -1,38 +1,33 @@
 <div class="datecontrol-container">
   <div class="body-container">
-    <button class="left-button" type="button">LB</button>
+    <button class="left-button" type="button" (click)="previousWeek()">
+      LB
+    </button>
     <div class="date-list">
-      <button type="button" class="date-container">
-        <div class="date-name">Mon</div>
-        <div class="date">
-          <div>1</div>
+      <button
+        *ngFor="let item of dateList"
+        type="button"
+        class="date-container"
+        (click)="clickDate(item.date)"
+        [class.active]="
+          item.date.getDate() === activeDate.getDate() &&
+          item.date.getMonth() === activeDate.getMonth() &&
+          item.date.getFullYear() === activeDate.getFullYear()
+        "
+      >
+        <div class="date-name">{{ item.weekDay }}</div>
+        <div
+          class="date"
+          [class.active]="
+            item.date.getDate() === currentDate.getDate() &&
+            item.date.getMonth() === currentDate.getMonth() &&
+            item.date.getFullYear() === currentDate.getFullYear()
+          "
+        >
+          {{ item.date.getDate() }}
         </div>
       </button>
-      <button type="button" class="date-container">
-        <div class="date-name">Tue</div>
-        <div class="date">2</div>
-      </button>
-      <button type="button" class="date-container">
-        <div class="date-name">Wed</div>
-        <div class="date active">3</div>
-      </button>
-      <button type="button" class="date-container">
-        <div class="date-name">Thu</div>
-        <div class="date">4</div>
-      </button>
-      <button type="button" class="date-container">
-        <div class="date-name">Fri</div>
-        <div class="date">5</div>
-      </button>
-      <button type="button" class="date-container">
-        <div class="date-name">Sat</div>
-        <div class="date">6</div>
-      </button>
-      <button type="button" class="date-container">
-        <div class="date-name">Sun</div>
-        <div class="date">7</div>
-      </button>
     </div>
-    <button class="right-button" type="button">RB</button>
+    <button class="right-button" type="button" (click)="nextWeek()">RB</button>
   </div>
 </div>
