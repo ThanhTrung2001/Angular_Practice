@@ -34,19 +34,19 @@ export class DateControlComponent {
   }
 
   getDayInWeek() {
-    //Monday 1, Sunday 0
+    //start in Sunday : Monday 1, Sunday 0 is 7 => start in Monday will be Monday 0, Sunday 6
     return this.currentDate.getDay() === 0 ? 6 : this.currentDate.getDay() - 1;
   }
 
   clickDate(day: Date) {
     this.activeDate = new Date(day);
+    console.log(this.activeDate);
   }
 
   nextWeek() {
     this.dateList.forEach((element) => {
       element.date.setDate(element.date.getDate() + 7);
     });
-    console.log(this.activeDate);
   }
   previousWeek() {
     this.dateList.forEach((element) => {
