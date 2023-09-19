@@ -8,6 +8,7 @@
     <div class="divider"></div>
     <div class="upload-drag-container">
       <div
+        *ngIf="uploadFiles.length === 0"
         class="upload-drag-zone"
         appDrag
         (files)="onFileDropped($event)"
@@ -21,11 +22,7 @@
         />
         <!-- use ngIf check if FileList have items or not to allow drag file, or else will show upload status -->
         <!-- If fileDrop[] has length != 0 -->
-        <div
-          *ngIf="uploadFiles.length === 0"
-          class="not-drag-container"
-          [class.active]="isDragFile === false"
-        >
+        <div class="not-drag-container" [class.active]="isDragFile === false">
           <div class="image-showing"></div>
           <div class="middle-title">
             <div class="showing-title">Drag & drop files or&nbsp;</div>
