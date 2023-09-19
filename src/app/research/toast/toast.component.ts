@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { NotificationSnackBarComponent } from './notification-snack-bar/notification-snack-bar.component';
 
+// must import BrowserAnimationModule before implements snackbar
+
 @Component({
   selector: 'app-toast',
   templateUrl: './toast.component.html',

@@ -28,6 +28,9 @@ import { NgxMasonryModule } from 'ngx-masonry';
 import { GridViewComponent } from './view-practice/grid-view/grid-view.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { OverflowDownlineComponent } from './view-practice/overflow-downline/overflow-downline.component';
+import { DialogModule } from '@angular/cdk/dialog';
+import { SlideDialogComponent } from './dialog/slide-dialog/slide-dialog.component';
+import { PopupDialogComponent } from './dialog/popup-dialog/popup-dialog.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +50,8 @@ import { OverflowDownlineComponent } from './view-practice/overflow-downline/ove
     MasonryViewComponent,
     GridViewComponent,
     OverflowDownlineComponent,
+    SlideDialogComponent,
+    PopupDialogComponent,
   ],
   imports: [
     CommonModule,
@@ -61,6 +66,7 @@ import { OverflowDownlineComponent } from './view-practice/overflow-downline/ove
     MatButtonModule,
     NgxMasonryModule,
     MatGridListModule,
+    DialogModule,
   ],
   exports: [ResearchComponent],
 })
