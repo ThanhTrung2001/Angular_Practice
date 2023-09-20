@@ -1,0 +1,16 @@
+$color-outline: red;
+
+::ng-deep {
+  mat-form-field {
+    .mdc-text-field--outlined {
+      --mdc-outlined-text-field-hover-outline-color: #226fec !important;
+      --mdc-outlined-text-field-outline-color: #dbdee0;
+      --mdc-outlined-text-field-focus-outline-color: #226fec;
+      --mdc-outlined-text-field-label-text-color: #929ba2;
+      --mdc-outlined-text-field-focus-label-text-color: #000;
+      --mdc-outlined-text-field-outline-width: 1.5px;
+      --mdc-outlined-text-field-focus-outline-width: 1.5px;
+      --mdc-outlined-text-field-container-shape: 8px;
+    }
+  }
+}

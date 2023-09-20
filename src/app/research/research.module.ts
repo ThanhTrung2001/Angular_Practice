@@ -31,6 +31,13 @@ import { OverflowDownlineComponent } from './view-practice/overflow-downline/ove
 import { DialogModule } from '@angular/cdk/dialog';
 import { SlideDialogComponent } from './dialog/slide-dialog/slide-dialog.component';
 import { PopupDialogComponent } from './dialog/popup-dialog/popup-dialog.component';
+import { InputComponent } from './input/input.component';
+import { FormFieldComponent } from './input/form-field/form-field.component';
+import { CustomFieldComponent } from './input/custom-field/custom-field.component';
+import { DropDownComponent } from './input/drop-down/drop-down.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -52,6 +59,10 @@ import { PopupDialogComponent } from './dialog/popup-dialog/popup-dialog.compone
     OverflowDownlineComponent,
     SlideDialogComponent,
     PopupDialogComponent,
+    InputComponent,
+    FormFieldComponent,
+    CustomFieldComponent,
+    DropDownComponent,
   ],
   imports: [
     CommonModule,
@@ -67,6 +78,9 @@ import { PopupDialogComponent } from './dialog/popup-dialog/popup-dialog.compone
     NgxMasonryModule,
     MatGridListModule,
     DialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule
   ],
   exports: [ResearchComponent],
 })

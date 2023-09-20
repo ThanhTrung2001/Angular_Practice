@@ -10,13 +10,14 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { ToastComponent } from './toast/toast.component';
 import { UploadFileComponent } from './upload-file/upload-file.component';
 import { ViewPracticeComponent } from './view-practice/view-practice.component';
+import { InputComponent } from './input/input.component';
 
 const routes: Routes = [
   {
     path: '',
     component: ResearchComponent,
     children: [
-      { path: '', redirectTo: 'bar-rating', pathMatch: 'full' },
+      { path: '', redirectTo: 'input', pathMatch: 'full' },
       { path: 'bar-rating', component: BarRatingComponent },
       { path: 'big-calendar', component: BigCalendarComponent },
       { path: 'date-control', component: DateControlComponent },
@@ -26,6 +27,7 @@ const routes: Routes = [
       { path: 'snackbar', component: ToastComponent },
       { path: 'upload-file', component: UploadFileComponent },
       { path: 'view', component: ViewPracticeComponent },
+      { path: 'input', component: InputComponent },
       { path: '**', redirectTo: '' },
     ],
   },
