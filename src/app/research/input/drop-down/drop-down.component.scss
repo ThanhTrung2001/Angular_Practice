@@ -1,0 +1,38 @@
+:host {
+  ::ng-deep {
+    mat-form-field {
+      .mdc-text-field--outlined {
+        --mdc-outlined-text-field-hover-outline-color: #226fec;
+        --mdc-outlined-text-field-outline-color: #dbdee0;
+        --mdc-outlined-text-field-focus-outline-color: #226fec;
+        --mdc-outlined-text-field-label-text-color: #929ba2;
+        --mdc-outlined-text-field-focus-label-text-color: #000;
+        --mdc-outlined-text-field-outline-width: 1.5px;
+        --mdc-outlined-text-field-focus-outline-width: 1.5px;
+        --mdc-outlined-text-field-container-shape: 8px;
+      }
+      .mat-mdc-select-arrow-wrapper {
+        .mat-mdc-select-arrow {
+          width: 24px;
+          height: 24px;
+          transition: transform 0.3s ease;
+          svg {
+            fill: none;
+            path {
+              d: path("M8.5 10L12.5 14L16.5 10") !important;
+              stroke: #33343e !important;
+              stroke-width: 1.5 !important;
+              stroke-linecap: round !important;
+              stroke-linejoin: round !important;
+            }
+          }
+        }
+      }
+      &.mat-focused {
+        .mat-mdc-select-arrow {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

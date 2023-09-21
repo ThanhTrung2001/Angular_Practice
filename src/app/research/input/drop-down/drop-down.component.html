@@ -1,7 +1,7 @@
 <p>
   <mat-form-field appearance="outline">
     <mat-label>Select an option</mat-label>
-    <mat-select disableRipple>
+    <mat-select #selector (selectionChange)="onSelectionChange($event.value)">
       <mat-option value="1">Option 1</mat-option>
       <mat-option value="2">Option 2</mat-option>
       <mat-option value="3">Option 3</mat-option>
