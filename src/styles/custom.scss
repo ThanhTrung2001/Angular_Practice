@@ -1,0 +1,80 @@
+@use "@angular/material" as mat;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@include mat.core();
+
+$blue-palette: (
+  700: var(--primary-700),
+  600: var(--primary-600),
+  500: var(--primary-500),
+  400: var(--primary-400),
+  300: var(--primary-300),
+  200: var(--primary-200),
+  100: var(--primary-100),
+  50: var(--primary-50),
+  contrast: (
+    700: rgba(white, 1),
+    600: rgba(white, 0.87),
+    500: rgba(white, 0.87),
+    400: rgba(white, 0.87),
+    300: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    50: rgba(black, 0.87),
+  ),
+);
+$accent-palette: (
+  600: var(--neutral-600),
+  500: var(--neutral-500),
+  400: var(--neutral-400),
+  300: var(--neutral-300),
+  A200: var(--neutral-200),
+  A100: var(--neutral-100),
+  A400: var(--neutral-50),
+  contrast: (
+    600: rgba(white, 0.87),
+    500: rgba(white, 0.87),
+    400: rgba(white, 0.87),
+    300: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A100: rgba(black, 0.87),
+    A400: rgba(black, 0.87),
+  ),
+);
+$warn-palette: (
+  700: var(--warning-700),
+  600: var(--warning-600),
+  500: var(--warning-500),
+  400: var(--warning-400),
+  300: var(--warning-300),
+  200: var(--warning-200),
+  100: var(--warning-50),
+  contrast: (
+    700: rgba(white, 1),
+    600: rgba(white, 0.87),
+    500: rgba(white, 0.87),
+    400: rgba(white, 0.87),
+    300: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    50: rgba(black, 0.87),
+  ),
+);
+
+$Custom-app-primary: mat.define-palette($blue-palette, 700);
+$Custom-app-accent: mat.define-palette($accent-palette, A200, A100, A400);
+$Custom-app-warn: mat.define-palette($warn-palette);
+
+$Custom-app-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $Custom-app-primary,
+      accent: $Custom-app-accent,
+      warn: $Custom-app-warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($Custom-app-theme);

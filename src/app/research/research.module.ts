@@ -42,6 +42,9 @@ import { FormComponent } from './form/form.component';
 import { TemplateFormComponent } from './form/template-form/template-form.component';
 import { ReactiveFormComponent } from './form/reactive-form/reactive-form.component';
 import { ReactiveForm2Component } from './form/reactive-form2/reactive-form2.component';
+import { HeaderComponent } from './navigation-bar/header/header.component';
+import { NavigationComponent } from './navigation-bar/navigation/navigation.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -71,6 +74,8 @@ import { ReactiveForm2Component } from './form/reactive-form2/reactive-form2.com
     TemplateFormComponent,
     ReactiveFormComponent,
     ReactiveForm2Component,
+    HeaderComponent,
+    NavigationComponent,
   ],
   imports: [
     CommonModule,
@@ -91,6 +96,7 @@ import { ReactiveForm2Component } from './form/reactive-form2/reactive-form2.com
     MatInputModule,
     MatSelectModule,
     FormsModule,
+    MatSidenavModule,
   ],
   exports: [ResearchComponent],
 })

@@ -1,0 +1,36 @@
+<div class="navigation-bar-container" [@slideInOut]="isExpanded ? 'in' : 'out'">
+  <a class="nav-button-container flex items-center rounded-md active">
+    <mat-icon
+      id="calendar"
+      class="svg-icon active"
+      svgIcon="calendar"
+    ></mat-icon>
+    <label for="calendar" class="body-6 active" [class.showing]="isExpanded"
+      >Calendar</label
+    >
+  </a>
+  <a class="nav-button-container flex items-center rounded-md">
+    <mat-icon
+      id="profile"
+      class="svg-icon unactive"
+      svgIcon="profile"
+    ></mat-icon>
+    <label for="profile" class="body-6" [class.showing]="isExpanded"
+      >Profile</label
+    >
+  </a>
+  <a class="nav-button-container flex items-center rounded-md">
+    <mat-icon id="forum" class="svg-icon unactive" svgIcon="people"></mat-icon>
+    <label for="forum" class="body-6" [class.showing]="isExpanded">Forum</label>
+  </a>
+  <a class="nav-button-container flex items-center rounded-md">
+    <mat-icon
+      id="certificates"
+      class="svg-icon unactive"
+      svgIcon="certificates"
+    ></mat-icon>
+    <label for="certificates" class="body-6" [class.showing]="isExpanded"
+      >Certificates</label
+    >
+  </a>
+</div>

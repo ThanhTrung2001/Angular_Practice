@@ -1,1 +1,25 @@
-<p>navigation-bar works!</p>
+<div class="body-container flex flex-col">
+  <div class="top-row flex flex-col">
+    <app-header></app-header>
+  </div>
+  <div class="bottom-row flex flex-row flex-1">
+    <mat-drawer-container class="flex flex-1" hasBackdrop="false">
+      <mat-drawer
+        #drawer
+        mode="push"
+        opened="true"
+        class="navigation"
+        (mouseenter)="expandedNav()"
+        (mouseleave)="collapsedNav()"
+      >
+        <app-navigation
+          [isExpanded]="isExpanded"
+          class="flex flex-col items-center overflow-hidden"
+        ></app-navigation>
+      </mat-drawer>
+      <mat-drawer-content class="content-container flex flex-col flex-1">
+        <router-outlet> </router-outlet>
+      </mat-drawer-content>
+    </mat-drawer-container>
+  </div>
+</div>
