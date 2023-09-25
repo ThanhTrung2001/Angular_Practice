@@ -16,7 +16,7 @@ import { NgxFileDropModule } from 'ngx-file-drop';
 import { UploadedItemComponent } from './upload-file/uploaded-item/uploaded-item.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { NgxFileDragDropModule } from 'ngx-file-drag-drop';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DragDirective } from './upload-file/directives/dragndrop.directive';
 import { NotificationSnackBarComponent } from './toast/notification-snack-bar/notification-snack-bar.component';
 import { MatIconModule } from '@angular/material/icon';
@@ -38,6 +38,10 @@ import { DropDownComponent } from './input/drop-down/drop-down.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { FormComponent } from './form/form.component';
+import { TemplateFormComponent } from './form/template-form/template-form.component';
+import { ReactiveFormComponent } from './form/reactive-form/reactive-form.component';
+import { ReactiveForm2Component } from './form/reactive-form2/reactive-form2.component';
 
 @NgModule({
   declarations: [
@@ -63,10 +67,15 @@ import { MatSelectModule } from '@angular/material/select';
     FormFieldComponent,
     CustomFieldComponent,
     DropDownComponent,
+    FormComponent,
+    TemplateFormComponent,
+    ReactiveFormComponent,
+    ReactiveForm2Component,
   ],
   imports: [
     CommonModule,
     RouterModule,
+    ReactiveFormsModule,
     ResearchRoutingModule,
     BarRatingModule,
     MatProgressBarModule,
@@ -80,7 +89,8 @@ import { MatSelectModule } from '@angular/material/select';
     DialogModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    FormsModule,
   ],
   exports: [ResearchComponent],
 })

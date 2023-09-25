@@ -1,0 +1,28 @@
+<div class="container">
+  <h1 class="title">Template-Driven Form</h1>
+  <form class="form" #templateForm="ngForm">
+    <div ngModelGroup="user">
+      <div class="user-name">
+        <label for="name">UserName</label>
+        <input
+          type="text"
+          name="name"
+          [(ngModel)]="user.name"
+          placeholder="UserName"
+        />
+      </div>
+      <div class="user-password">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          [(ngModel)]="user.password"
+          placeholder="Password"
+        />
+      </div>
+      <div class="submit-button">
+        <button type="submit" (click)="submit(templateForm)">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>

@@ -11,6 +11,9 @@ import { ToastComponent } from './toast/toast.component';
 import { UploadFileComponent } from './upload-file/upload-file.component';
 import { ViewPracticeComponent } from './view-practice/view-practice.component';
 import { InputComponent } from './input/input.component';
+import { ReactiveFormComponent } from './form/reactive-form/reactive-form.component';
+import { TemplateFormComponent } from './form/template-form/template-form.component';
+import { FormComponent } from './form/form.component';
 
 const routes: Routes = [
   {
@@ -28,6 +31,7 @@ const routes: Routes = [
       { path: 'upload-file', component: UploadFileComponent },
       { path: 'view', component: ViewPracticeComponent },
       { path: 'input', component: InputComponent },
+      { path: 'form', component: FormComponent },
       { path: '**', redirectTo: '' },
     ],
   },

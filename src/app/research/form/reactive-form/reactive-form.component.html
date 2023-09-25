@@ -1,0 +1,49 @@
+<div class="container">
+  <h1 class="title">Reactive Register Form</h1>
+  <form class="form" [formGroup]="userForm" (ngSubmit)="submitForm()">
+    <div class="user-name">
+      <label for="name">UserName</label>
+      <input
+        id="name"
+        type="text"
+        formControlName="name"
+        placeholder="UserName"
+      />
+      <div *ngIf="userForm.get('name')?.errors">
+        <div *ngIf="userForm.get('name')?.errors?.['required']">
+          UserName must be filled
+        </div>
+        <div *ngIf="userForm.get('name')?.errors?.['userExistedInDatabase']">
+          Exist Username
+        </div>
+      </div>
+    </div>
+    <div class="user-password">
+      <label for="password">Pasword</label>
+      <input
+        id="password"
+        type="password"
+        formControlName="password"
+        placeholder="Password"
+      />
+    </div>
+    <div class="user-password">
+      <label for="retypepassword">RetypePasword</label>
+      <input
+        id="retypepassword"
+        type="password"
+        formControlName="retypepassword"
+        placeholder="RetypePassword"
+      />
+    </div>
+    <div *ngIf="userForm.get('retypepassword')?.errors?.['retypeNotTheSame']">
+      Retry invalid
+    </div>
+    <div class="submit-button">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+  <div *ngIf="userForm.errors?.['retypeNotTheSame']">Retry invalid</div>
+  <pre>{{ userForm.value | json }}</pre>
+  <pre>{{ userForm.valid | json }}</pre>
+</div>

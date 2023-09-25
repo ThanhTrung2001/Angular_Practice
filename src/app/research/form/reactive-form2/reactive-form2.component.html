@@ -1,0 +1,30 @@
+<div class="container">
+  <h1 class="title">Reactive Login Form</h1>
+  <form class="form" [formGroup]="userForm" (ngSubmit)="submitForm()">
+    <div class="user-name">
+      <label for="name">UserName</label>
+      <input
+        id="name"
+        type="text"
+        formControlName="name"
+        placeholder="UserName"
+      />
+      <button type="button" (click)="setValue()">Set Value</button>
+      <button type="button" (click)="setEmpty()">Set Empty Value</button>
+      <button type="button" (click)="setValueForUserName()">patch Name</button>
+      <button type="button" (click)="resetValue()">Reset Value</button>
+    </div>
+    <div class="user-password">
+      <label for="password">Pasword</label>
+      <input
+        id="password"
+        type="password"
+        formControlName="password"
+        placeholder="Password"
+      />
+    </div>
+    <div class="submit-button">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+</div>
