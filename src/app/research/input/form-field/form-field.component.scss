@@ -10,6 +10,9 @@
         --mdc-outlined-text-field-outline-width: 1.5px;
         --mdc-outlined-text-field-focus-outline-width: 1.5px;
         --mdc-outlined-text-field-container-shape: 8px;
+        .mdc-notched-outline__notch {
+          border-right: none;
+        }
       }
     }
   }
